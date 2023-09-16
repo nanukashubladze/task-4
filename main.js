@@ -16,14 +16,19 @@ console.log(sliceSentence("მშვენიერია, შემძლებ
 
 3.
 
-function findCountryAndMobileNum(number, country) {
-  if (number === "995577774745" && country === "GE") return "+995577774745, GE";
-  if (number === "199577774745" && country === "US") return "+1(995)77774745, US";
-  if (number === "795577774745" && country === "RU") return "+795577774745, RU";
-  else return "არ ვიცით რა ქვეყანაა ეს!";
+function findCountryAndMobileNum(numb, country) {
+  if (country === "GE") {
+    return "+995" + numb + ", GE";
+  } else if (country === "US") {
+    return "+1(" + numb + "), US";
+  } else if (country === "RU") {
+    return "+7" + numb + ", RU";
+  } else {
+    return "არ ვიცით რა ქვეყანაა ეს!";
+  }
 }
 
-console.log(findCountryAndMobileNum("995577774745", "GE"));
+console.log(findCountryAndMobileNum("+15577774745", "US"));
 
 
 4.
